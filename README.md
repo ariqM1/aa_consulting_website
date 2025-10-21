@@ -1,23 +1,23 @@
 # A&A Consulting Website
 
-A professional consulting website built with Next.js 15, featuring a portfolio showcase, contact form, and responsive design.
+A professional consulting website built with NextJS, featuring a portfolio showcase, contact form, and responsive design.
 
 ## Features
 
-- **Navigation**: Home, About, Services, Portfolio pages with "Get a Quote" button
-- **Portfolio Showcase**: Interactive project cards with detailed case studies
-- **Contact Form**: Quote request form with email integration via Nodemailer
-- **Responsive Design**: Mobile-first design with CSS Modules
-- **Project Carousel**: Home page carousel displaying featured projects
+-   **Navigation**: Home, About, Services, Portfolio pages with "Get a Quote" button
+-   **Portfolio Showcase**: Interactive project cards with detailed case studies
+-   **Contact Form**: Quote request form with email integration via Nodemailer
+-   **Responsive Design**: Mobile-first design with CSS Modules
+-   **Project Carousel**: Home page carousel displaying featured projects
 
 ## Tech Stack
 
-- Next.js 15.5.6
-- React 19.1.0
-- TypeScript
-- Tailwind CSS 4
-- Nodemailer (email functionality)
-- CSS Modules
+-   Next.js 15.5.6
+-   React 19.1.0
+-   TypeScript
+-   Tailwind CSS 4
+-   Nodemailer (email functionality)
+-   CSS Modules
 
 ## Deployment on Replit
 
@@ -47,6 +47,7 @@ EMAIL_PASS=your-gmail-app-password
 ```
 
 **To get a Gmail App Password:**
+
 1. Go to your Google Account settings
 2. Enable 2-factor authentication if not already enabled
 3. Go to Security → 2-Step Verification → App Passwords
@@ -83,18 +84,18 @@ If you want to run this project locally:
 
 1. Clone the repository
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 3. Create a `.env.local` file with your email credentials:
-   ```
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASS=your-gmail-app-password
-   ```
+    ```
+    EMAIL_USER=your-email@gmail.com
+    EMAIL_PASS=your-gmail-app-password
+    ```
 4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm run dev
+    ```
 5. Open [http://localhost:3000](http://localhost:3000)
 
 ## Project Structure
