@@ -1,7 +1,7 @@
 .container {
 	min-height: calc(100vh - 4rem);
 	padding: 3rem 2rem;
-	max-width: 70rem;
+	max-width: 80rem;
 	margin: 0 auto;
 }
 
@@ -24,27 +24,40 @@
 }
 
 .header {
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 
 .title {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 	margin: 0 0 0.5rem 0;
 	color: #111827;
+	line-height: 1.2;
 }
 
 .category {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	color: #6b7280;
 	margin: 0;
 }
 
+.mainContent {
+	display: grid;
+	grid-template-columns: 350px 1fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.imageColumn {
+	position: sticky;
+	top: 2rem;
+}
+
 .hero {
 	width: 100%;
-	margin: 2rem 0 3rem;
-	border-radius: 0.75rem;
+	border-radius: 0.5rem;
 	overflow: hidden;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .heroImage {
@@ -54,7 +67,7 @@
 }
 
 .content {
-	font-size: 1.125rem;
+	font-size: 1rem;
 	line-height: 1.75;
 	color: #374151;
 }
@@ -104,6 +117,22 @@
 	font-style: italic;
 }
 
+@media (max-width: 1024px) {
+	.mainContent {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.imageColumn {
+		position: static;
+	}
+
+	.hero {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
 @media (max-width: 768px) {
 	.title {
 		font-size: 2rem;
@@ -114,6 +143,6 @@
 	}
 
 	.content {
-		font-size: 1rem;
+		font-size: 0.95rem;
 	}
 }
