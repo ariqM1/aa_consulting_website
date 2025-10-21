@@ -1,0 +1,129 @@
+/* --------------------------------------------- */
+/* File: app/about/about.scss                    */
+/* --------------------------------------------- */
+
+:root {
+	--about-max: 72rem;
+}
+
+.about {
+	margin-inline: auto;
+	max-width: var(--about-max);
+	padding: 3rem 1rem;
+}
+
+.about__intro {
+	margin-bottom: 2rem;
+}
+.about__title {
+	font-size: clamp(2rem, 3vw, 2.5rem);
+	font-weight: 700;
+}
+.about__description {
+	color: hsl(0 0% 40%);
+	max-width: 48ch;
+}
+.about__brand {
+	font-weight: 600;
+}
+
+.team {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+	.team {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.member {
+	display: grid;
+	grid-template-columns: 1fr;
+	background: white;
+	border: 1px solid hsl(0 0% 90%);
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 768px) {
+	.member {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+.member__image {
+	position: relative;
+	min-height: 14rem;
+}
+.member__image img {
+	object-fit: cover;
+}
+
+.member__body {
+	padding: 1rem 1.25rem 1.25rem;
+}
+.member__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	margin-bottom: 0.25rem;
+}
+.member__name {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.member__tags {
+	display: inline-flex;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.member__tags li {
+	font-size: 0.75rem;
+	border: 1px solid hsl(0 0% 86%);
+	padding: 0.2rem 0.5rem;
+	border-radius: 999px;
+}
+
+.member__bio {
+	color: hsl(0 0% 35%);
+	line-height: 1.7;
+	margin: 0.5rem 0 1rem;
+}
+.member__highlights {
+	color: hsl(0 0% 35%);
+	padding-left: 1.2rem;
+	margin: 0 0 1rem;
+}
+.member__highlights li {
+	margin: 0.25rem 0;
+}
+
+.member__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+.member__links a {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+.member__links a:hover {
+	opacity: 0.85;
+}
+
+/* Subtle hover lift */
+.member {
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.member:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}

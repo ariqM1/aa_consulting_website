@@ -1,0 +1,68 @@
+.navbar {
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.navbarContainer {
+	max-width: 80rem;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.navbarContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+}
+
+.navbarLogo a {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #111827;
+	text-decoration: none;
+}
+
+.navbarLogo a:hover {
+	color: #374151;
+}
+
+.navbarRight {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.navbarLinks {
+	display: flex;
+	gap: 2rem;
+}
+
+.navbarLinks a {
+	color: #374151;
+	font-size: 0.875rem;
+	font-weight: 500;
+	text-decoration: none;
+	padding: 0.5rem 0.75rem;
+	transition: color 0.2s;
+}
+
+.navbarLinks a:hover {
+	color: #111827;
+}
+
+.quoteButton {
+	background-color: #22311d;
+	color: white;
+	padding: 0.625rem 1.5rem;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+
+.quoteButton:hover {
+	background-color: #1f2937;
+}

@@ -1,0 +1,61 @@
+.carousel {
+	position: relative;
+	width: 100%;
+}
+
+.controls {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.controlButton {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: 1px solid #e5e7eb;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.controlButton:hover:not(:disabled) {
+	background: #f9fafb;
+	border-color: #d1d5db;
+}
+
+.controlButton:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.projectsContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.projectWrapper {
+	/* Scale down the project cards for the home page */
+	font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+	.projectsContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.projectsContainer {
+		grid-template-columns: 1fr;
+	}
+
+	.projectWrapper {
+		font-size: 1rem;
+	}
+}

@@ -1,0 +1,1 @@
+never use inline styling for the page. 
