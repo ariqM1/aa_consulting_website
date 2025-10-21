@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A&A Consulting Website
 
-## Getting Started
+A professional consulting website built with Next.js 15, featuring a portfolio showcase, contact form, and responsive design.
 
-First, run the development server:
+## Features
+
+- **Navigation**: Home, About, Services, Portfolio pages with "Get a Quote" button
+- **Portfolio Showcase**: Interactive project cards with detailed case studies
+- **Contact Form**: Quote request form with email integration via Nodemailer
+- **Responsive Design**: Mobile-first design with CSS Modules
+- **Project Carousel**: Home page carousel displaying featured projects
+
+## Tech Stack
+
+- Next.js 15.5.6
+- React 19.1.0
+- TypeScript
+- Tailwind CSS 4
+- Nodemailer (email functionality)
+- CSS Modules
+
+## Deployment on Replit
+
+### Step 1: Upload Project to Replit
+
+1. Go to [Replit](https://replit.com)
+2. Click "Create Repl"
+3. Select "Import from GitHub" or upload your project files
+4. Choose Node.js as the template
+
+### Step 2: Install Dependencies
+
+Once your project is uploaded, Replit will automatically detect `package.json` and install dependencies. If not, run:
+
+```bash
+npm install
+```
+
+### Step 3: Set Up Environment Variables
+
+1. In Replit, click on the "Secrets" tab (lock icon in the left sidebar)
+2. Add the following environment variables:
+
+```
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-gmail-app-password
+```
+
+**To get a Gmail App Password:**
+1. Go to your Google Account settings
+2. Enable 2-factor authentication if not already enabled
+3. Go to Security → 2-Step Verification → App Passwords
+4. Generate a new app password for "Mail"
+5. Copy the 16-character password and use it as `EMAIL_PASS`
+
+### Step 4: Run the Development Server
+
+Click the "Run" button in Replit, or manually run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at the URL provided by Replit (typically `https://your-repl-name.your-username.repl.co`)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Step 5: Deploy to Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Click the "Deploy" button in Replit
+2. Choose "Autoscale" or "Reserved VM" deployment option
+3. Configure deployment settings as needed
+4. Click "Deploy"
 
-## Learn More
+For production deployment, Replit will run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If you want to run this project locally:
 
-## Deploy on Vercel
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Create a `.env.local` file with your email credentials:
+   ```
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-gmail-app-password
+   ```
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+aa-consulting-website/
+├── app/
+│   ├── about/          # About page
+│   ├── api/quote/      # API route for contact form
+│   ├── projects/       # Portfolio pages
+│   ├── quote/          # Quote request page
+│   ├── services/       # Services page
+│   ├── layout.tsx      # Root layout with navbar & footer
+│   └── page.tsx        # Home page with carousel
+├── components/
+│   ├── Footer.tsx      # Site footer
+│   ├── Navbar.tsx      # Navigation bar
+│   ├── ProjectCard.tsx # Reusable project card
+│   └── ProjectCarousel.tsx # Home page carousel
+├── public/
+│   └── images/         # Project images
+└── package.json
+```
+
+## Portfolio Projects
+
+The website showcases three main projects:
+
+1. **FinanceTrack**: Full-stack financial tracking platform with Plaid API integration
+2. **CodeDocGen AI**: AI-powered code documentation tool using AWS Bedrock and LangChain
+3. **JustHealth**: HealthTech startup with HIPAA-compliant appointment management
+
+## Contact
+
+For quote requests, use the "Get a Quote" button in the navigation bar.
+
+## License
+
+Private project for A&A Consulting.
